@@ -1,8 +1,8 @@
-export default function RootPage() {
+export default function SizePage() {
   return (
     <>
       <header></header>
-      <main>Root Page</main>
+      <main>Size Page</main>
       <footer></footer>
     </>
   );

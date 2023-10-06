@@ -1,8 +1,8 @@
-export default function RootPage() {
+export default function UserPage() {
   return (
     <>
       <header></header>
-      <main>Root Page</main>
+      <main>User Page</main>
       <footer></footer>
     </>
   );

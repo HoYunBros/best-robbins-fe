@@ -1,8 +1,8 @@
-export default function RootPage() {
+export default function ResultPage() {
   return (
     <>
       <header></header>
-      <main>Root Page</main>
+      <main>Result Page</main>
       <footer></footer>
     </>
   );

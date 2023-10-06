@@ -27,8 +27,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
+    // 기본 light mode
     <html lang="ko">
-      <body className={Pretendard.className}>{children}</body>
+      <body className={Pretendard.className}>
+        <div className="m-auto min-h-screen bg-white sm:w-screen md:w-96">
+          <section className="flex min-h-screen flex-col items-center justify-between p-24">
+            {children}
+          </section>
+        </div>
+      </body>
     </html>
   );
 }

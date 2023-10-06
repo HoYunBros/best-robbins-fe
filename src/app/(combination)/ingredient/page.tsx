@@ -1,8 +1,8 @@
-export default function RootPage() {
+export default function IngredientPage() {
   return (
     <>
       <header></header>
-      <main>Root Page</main>
+      <main>Ingredient Page</main>
       <footer></footer>
     </>
   );
