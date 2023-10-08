@@ -27,11 +27,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    // 기본 light mode
-    <html lang="ko">
+    <html lang="ko" className="dark">
       <body className={Pretendard.className}>
-        <div className="m-auto min-h-screen bg-white sm:w-screen md:w-96">
-          <section className="flex min-h-screen flex-col items-center justify-between p-24">
+        <div className="h-screen w-screen bg-white-light dark:bg-gray_01-dark ">
+          <section className="mx-auto flex min-h-screen flex-col items-center justify-between bg-gray_01-light text-gray_05-light dark:bg-gray_00-dark dark:text-gray_05-dark sm:w-screen md:w-96">
             {children}
           </section>
         </div>
