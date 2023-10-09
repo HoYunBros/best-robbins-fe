@@ -1,6 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import localFont from 'next/font/local';
+
+const ThemeProvider = dynamic(() => import('@/app/theme-provider'), { ssr: false });
 
 export const Pretendard = localFont({
   src: '../../public/fonts/PretendardVariable.woff2',
@@ -27,13 +30,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko" className="dark">
+    <html lang="ko">
       <body className={Pretendard.className}>
-        <div className="h-screen w-screen bg-white-light dark:bg-gray_01-dark ">
-          <section className="mx-auto flex min-h-screen flex-col items-center justify-between bg-gray_01-light text-gray_05-light dark:bg-gray_00-dark dark:text-gray_05-dark sm:w-screen md:w-96">
-            {children}
-          </section>
-        </div>
+        <ThemeProvider>
+          <div className="h-screen w-screen bg-gray_01-light dark:bg-gray_01-dark ">
+            <section className="mx-auto flex h-full flex-col items-center justify-between bg-gray_00-light text-gray_05-light dark:bg-gray_00-dark dark:text-gray_05-dark sm:w-screen md:w-96">
+              {children}
+            </section>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
