@@ -12,13 +12,13 @@ export default function ThemeSwitcher() {
         className="bg- flex h-[30px] w-[30px] items-center justify-center rounded-full bg-gray_00-light dark:bg-gray_01-dark"
         onClick={toggleTheme}
       >
-        <IoSunnyOutline className="" size="18" />
+        <IoSunnyOutline className="text-gray_05-light dark:text-gray_00-light" size="16" />
       </button>
       <button
         className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-gray_02-light dark:bg-gray_05-dark"
         onClick={toggleTheme}
       >
-        <IoMoonOutline className="dark:text-gray_00-dark" size="18" />
+        <IoMoonOutline className="text-gray_00-dark dark:text-gray_00-dark" size="16" />
       </button>
     </div>
   );

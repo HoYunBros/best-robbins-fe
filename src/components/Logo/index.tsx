@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import LogoCharacter from './LogoCharacter';
 import LogoTitle from './LogoTitle';
 
