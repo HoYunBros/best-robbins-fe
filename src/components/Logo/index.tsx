@@ -5,9 +5,9 @@ import LogoTitle from './LogoTitle';
 
 export default function Logo() {
   return (
-    <section className="flex items-center justify-between gap-[6px]">
+    <div className="flex items-center justify-between gap-[6px]">
       <LogoCharacter />
       <LogoTitle />
-    </section>
+    </div>
   );
 }
