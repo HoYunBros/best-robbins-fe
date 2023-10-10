@@ -36,7 +36,7 @@ const config: Config = {
         dark: '#9096A9',
       },
       gray_04: {
-        light: '#666666',
+        light: '#3B4359',
         dark: '#EEEEEE',
       },
       gray_05: {

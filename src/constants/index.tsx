@@ -1,0 +1,6 @@
+export const SWIPER = {
+  DELAY: 4000,
+  SPACE_BETWEEN: -50,
+  SLIDES_PER_VIEW: 1,
+  LOOPED_SLIDES: 2,
+};
