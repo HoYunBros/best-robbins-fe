@@ -28,3 +28,8 @@ export type Size = {
   imageUrl: string;
   value: number;
 };
+
+export type UserSelect = {
+  sizeId: number;
+  ingredientIds: number[];
+};
