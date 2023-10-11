@@ -43,14 +43,16 @@ export default function Carousel({ recommendations }: Props) {
     <Swiper
       className="h-full w-full"
       modules={[Autoplay, A11y]}
-      // autoplay={{ delay: SWIPER.DELAY, disableOnInteraction: false }}
+      autoplay={{ delay: SWIPER.DELAY, disableOnInteraction: false }}
       spaceBetween={bodyWidth < STANDARD.WIDTH ? bodyWidth : SWIPER.SPACE_BETWEEN}
       slidesPerView={SWIPER.SLIDES_PER_VIEW}
       loop={true}
-      loopedSlides={SWIPER.LOOPED_SLIDES}
+      loopedSlides={1}
       onRealIndexChange={swiper => {
         setCurrentSlideIndex(swiper.realIndex);
       }}
+      speed={SWIPER.SPEED}
+      cssMode={true}
     >
       {recommendations.map((recommendation, index) => (
         <SwiperSlide
@@ -63,7 +65,7 @@ export default function Carousel({ recommendations }: Props) {
           }}
         >
           <div
-            className={`relative flex items-center justify-center rounded-3xl shadow-light dark:shadow-dark ${
+            className={`relative flex items-center justify-center rounded-3xl shadow-light transition-all dark:shadow-dark ${
               isTargetIndex(currentSlideIndex, index)
                 ? 'z-10 h-[460px] w-[340px] cursor-pointer'
                 : 'h-[368px] w-[272px]'
