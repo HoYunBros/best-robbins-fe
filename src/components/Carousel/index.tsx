@@ -43,7 +43,7 @@ export default function Carousel({ recommendations }: Props) {
     <Swiper
       className="h-full w-full"
       modules={[Autoplay, A11y]}
-      autoplay={{ delay: SWIPER.DELAY, disableOnInteraction: false }}
+      // autoplay={{ delay: SWIPER.DELAY, disableOnInteraction: false }}
       spaceBetween={bodyWidth < STANDARD.WIDTH ? bodyWidth : SWIPER.SPACE_BETWEEN}
       slidesPerView={SWIPER.SLIDES_PER_VIEW}
       loop={true}

@@ -11,7 +11,6 @@ type Props = {
 };
 
 export default function RecipeCard({ recipe, hasBookmark = false }: Props) {
-  console.log(recipe);
   const flavors = recipe.flavors;
   const flavorCount = flavors.length;
   const flavorsFirstRow = flavors.slice(0, 2);
@@ -41,15 +40,15 @@ export default function RecipeCard({ recipe, hasBookmark = false }: Props) {
           </p>
           <p>
             {flavorsSecondRow.map(flavor => flavor.flavorName).join(' + ')}
-            {flavorCount >= 3 && ' + '}
+            {flavorCount >= 5 && ' + '}
           </p>
           <p>{flavorsThirdRow.map(flavor => flavor.flavorName).join(' + ')}</p>
         </div>
       </div>
       <div
-        className={`flex ${getImageWrapperWidth(
-          flavorCount,
-        )} flex-1 flex-wrap content-center items-center justify-center`}
+        className={`flex h-3/5 flex-wrap content-center items-center justify-center gap-x-2`}
+        // FIXME: tailwindcss className으로 동적으로 width를 조정하기
+        style={{ width: getImageWrapperWidth(flavorCount) }}
       >
         {recipe.flavors.map(flavor => (
           <Image
@@ -58,7 +57,6 @@ export default function RecipeCard({ recipe, hasBookmark = false }: Props) {
             alt={flavor.flavorName}
             width={80}
             height={85}
-            priority
           />
         ))}
       </div>
