@@ -47,7 +47,7 @@ export default function Carousel({ recommendations }: Props) {
       spaceBetween={bodyWidth < STANDARD.WIDTH ? bodyWidth : SWIPER.SPACE_BETWEEN}
       slidesPerView={SWIPER.SLIDES_PER_VIEW}
       loop={true}
-      loopedSlides={1}
+      loopedSlides={SWIPER.LOOPED_SLIDES}
       onRealIndexChange={swiper => {
         setCurrentSlideIndex(swiper.realIndex);
       }}

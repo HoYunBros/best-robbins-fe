@@ -21,3 +21,15 @@ export type Recommendation = {
   cover: Cover;
   recipe: Recipe;
 };
+
+export type Size = {
+  id: number;
+  name: string;
+  imageUrl: string;
+  value: number;
+};
+
+export type UserSelect = {
+  sizeId: number;
+  ingredientIds: number[];
+};
