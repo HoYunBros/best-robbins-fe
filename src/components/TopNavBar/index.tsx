@@ -1,8 +1,5 @@
-import Link from 'next/link';
-
 import Logo from '@/components/Logo';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
-import { IoChevronBack, IoClose } from 'react-icons/io5';
 import BackButton from '../BackButton';
 import CloseButton from '../CloseButton';
 
@@ -13,12 +10,13 @@ type Props = {
 
 export default function TopNavBar({ pageName = 'home', prevPage = '/' }: Props) {
   const isHome = pageName === 'home';
-  const isProcess = pageName !== 'home';
+  const isProcess = !isHome;
   const processWidth = {
     size: 'w-[33%]',
     ingredient: 'w-[67%]',
     result: 'w-full',
   };
+
   return (
     <header className="relative flex h-16 w-full flex-col items-center justify-between">
       <div

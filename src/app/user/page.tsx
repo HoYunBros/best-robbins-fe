@@ -1,9 +1,12 @@
+import TopNavBar from '@/components/TopNavBar';
+import GlobalNavBar from '@/components/GlobalNavBar';
+
 export default function UserPage() {
   return (
     <>
-      <header></header>
+      <TopNavBar />
       <main>User Page</main>
-      <footer></footer>
+      <GlobalNavBar />
     </>
   );
 }
