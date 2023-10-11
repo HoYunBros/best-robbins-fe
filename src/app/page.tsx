@@ -2,17 +2,22 @@ import Link from 'next/link';
 
 import TopNavBar from '@/components/TopNavBar';
 import GlobalNavBar from '@/components/GlobalNavBar';
+import Carousel from '@/components/Carousel';
+import { getRecommendations } from '@/services/getRecommendations';
 
-export default function RootPage() {
+export default async function RootPage() {
+  const recommendations = await getRecommendations();
   return (
     <>
       <TopNavBar />
-      <main className="flex w-full grow flex-col justify-start gap-6">
-        <div className="flex h-2/3 grow items-center justify-center">Carousel Slide</div>
-        <div className="flex h-1/3 grow-0 flex-col items-center justify-start px-[25px]">
+      <main className="flex h-full w-full flex-1 flex-col justify-start">
+        <div className="flex h-full items-center justify-center">
+          <Carousel recommendations={recommendations} />
+        </div>
+        <div className="relative flex h-1/6 w-full flex-none flex-col items-center justify-start">
           <Link
             href="/size"
-            className="w-full rounded-2xl border-0 bg-gray_01-light p-6 text-large font-bold dark:bg-gray_01-dark"
+            className="h-fit w-[340px] rounded-2xl border-0 bg-gray_01-light p-6 text-large font-bold dark:bg-gray_01-dark"
           >
             꿀조합 찾기
           </Link>
