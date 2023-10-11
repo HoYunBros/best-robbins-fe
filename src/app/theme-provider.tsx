@@ -1,5 +1,4 @@
 'use client';
-
 import { createContext, useContext, useState } from 'react';
 
 export const ThemeContext = createContext({});
@@ -19,16 +18,13 @@ type Props = {
 
 export default function ThemeProvider({ children }: Props) {
   // NOTE: 현재 유저 브라우저 설정 테마를 가져온다.
-
-  const initialTheme =
-    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
+  const initialTheme = 'light';
 
   const [theme, setTheme] = useState(initialTheme);
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
+
   return (
     <ThemeContext.Provider value={theme}>
       <ToggleThemeContext.Provider value={toggleTheme}>

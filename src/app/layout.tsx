@@ -1,9 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import localFont from 'next/font/local';
-
-const ThemeProvider = dynamic(() => import('@/app/theme-provider'), { ssr: false });
+import ThemeProvider from '@/app/theme-provider';
 
 export const Pretendard = localFont({
   src: '../../public/fonts/PretendardVariable.woff2',

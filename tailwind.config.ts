@@ -36,17 +36,12 @@ const config: Config = {
         dark: '#9096A9',
       },
       gray_04: {
-        light: '#666666',
+        light: '#3B4359',
         dark: '#EEEEEE',
       },
       gray_05: {
         light: '#292F3F',
         dark: '#FFFFFF',
-      },
-      shadow: {
-        light:
-          '0px 0px 16px 0px rgba(218, 226, 231, 0.3), 0px 24px 24px 0px rgba(181, 190, 197, 0.3)',
-        dark: '0px 0px 16px 0px rgba(0, 0, 0, 0.20), 0px 24px 24px 0px rgba(0, 0, 0, 0.20)',
       },
       card: {
         light: '#FFFFFF',
@@ -65,6 +60,11 @@ const config: Config = {
       normal: '400',
       semi_bold: '500',
       bold: '700',
+    },
+    boxShadow: {
+      light:
+        '0px 0px 16px 0px rgba(218, 226, 231, 0.3), 0px 24px 24px 0px rgba(181, 190, 197, 0.3)',
+      dark: '0px 0px 16px 0px rgba(0, 0, 0, 0.20), 0px 24px 24px 0px rgba(0, 0, 0, 0.20)',
     },
   },
   content: [
