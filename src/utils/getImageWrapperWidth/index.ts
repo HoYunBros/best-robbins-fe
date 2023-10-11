@@ -1,12 +1,12 @@
 export const getImageWrapperWidth = (count: number) => {
   switch (count) {
     case 2:
-      return 'w-32';
+      return '160px';
     case 3:
-      return 'w-52';
+      return '200px';
     case 4:
-      return 'w-52';
+      return '200px';
     default:
-      return 'w-60';
+      return '290px';
   }
 };
