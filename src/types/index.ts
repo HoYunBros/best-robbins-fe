@@ -38,5 +38,6 @@ export type Ingredient = {
 
 export type UserSelect = {
   sizeId: number;
+  sizeValue: number;
   ingredientIds: number[];
 };
