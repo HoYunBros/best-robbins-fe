@@ -47,7 +47,10 @@ export default function Carousel({ recommendations }: Props) {
     <Swiper
       className="h-full w-full"
       modules={[Autoplay, A11y, Navigation, Keyboard]}
-      autoplay={{ delay: SWIPER.DELAY, disableOnInteraction: false }}
+      autoplay={{
+        delay: isMobile() ? SWIPER.INFINITE_DELAY : SWIPER.NORMAL_DELAY,
+        disableOnInteraction: false,
+      }}
       freeMode={true}
       navigation={isDesktop}
       keyboard={{ enabled: true }}
@@ -60,7 +63,7 @@ export default function Carousel({ recommendations }: Props) {
       onRealIndexChange={swiper => {
         setCurrentSlideIndex(swiper.realIndex);
       }}
-      cssMode={true}
+      cssMode={isMobile()}
     >
       {recommendations.map((recommendation, index) => (
         <SwiperSlide
