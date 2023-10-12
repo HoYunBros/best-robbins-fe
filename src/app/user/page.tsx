@@ -1,5 +1,5 @@
-import TopNavBar from '@/components/TopNavBar';
-import GlobalNavBar from '@/components/GlobalNavBar';
+import TopNavBar from '@/components/common/TopNavBar';
+import GlobalNavBar from '@/components/common/GlobalNavBar';
 
 export default function UserPage() {
   return (

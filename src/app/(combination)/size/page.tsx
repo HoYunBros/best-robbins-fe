@@ -1,6 +1,6 @@
-import TopNavBar from '@/components/TopNavBar';
-import SizeRow from '@/components/SizeRow';
-import FooterButton from '@/components/FooterButton';
+import TopNavBar from '@/components/common/TopNavBar';
+import SizeRow from '@/components/size/SizeRow';
+import SizeFooter from '@/components/size/SizeFooter';
 import { getSizes } from '@/services/getSizes';
 
 export default async function SizePage() {
@@ -14,12 +14,12 @@ export default async function SizePage() {
     <>
       <TopNavBar pageName="size" prevPage="/" />
       <main className="flex h-full w-full flex-1 flex-col justify-start gap-y-5 px-5 pt-[34px]">
-        <div className="text-x_large font-semi_bold">어떤 사이즈를 드시나요?</div>
+        <h2 className="text-x_large font-semi_bold">어떤 사이즈를 드시나요?</h2>
         <SizeRow title="1가지 맛" sizes={oneFlavorSizes} />
         <SizeRow title="2가지 맛" sizes={twoFlavorSizes} />
         <SizeRow title="3가지 맛 이상" sizes={otherSizes} />
       </main>
-      <FooterButton nextPage="/ingredient" />
+      <SizeFooter nextPage="/ingredient" />
     </>
   );
 }

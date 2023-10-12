@@ -7,7 +7,8 @@ type State = {
 };
 
 type Action = {
-  setUserSelectSize: (sizeId: number) => void;
+  setUserSelectSizeId: (sizeId: number) => void;
+  setUserSelectSizeValue: (sizeValue: number) => void;
   setUserSelectIngredientIds: (ingredientIds: number[]) => void;
   reset: () => void;
 };
@@ -15,14 +16,17 @@ type Action = {
 const initialState: State = {
   userSelect: {
     sizeId: 0,
+    sizeValue: 0,
     ingredientIds: [],
   },
 };
 
 export const useUserSelectStore = create<State & Action>()(set => ({
   ...initialState,
-  setUserSelectSize: (sizeId: number) =>
+  setUserSelectSizeId: (sizeId: number) =>
     set(state => ({ userSelect: { ...state.userSelect, sizeId } })),
+  setUserSelectSizeValue: (sizeValue: number) =>
+    set(state => ({ userSelect: { ...state.userSelect, sizeValue } })),
   setUserSelectIngredientIds: (ingredientIds: number[]) =>
     set(state => ({ userSelect: { ...state.userSelect, ingredientIds } })),
   reset: () => set(initialState),

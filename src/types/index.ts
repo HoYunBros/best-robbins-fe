@@ -29,7 +29,15 @@ export type Size = {
   value: number;
 };
 
+export type Ingredient = {
+  id: number;
+  name: string;
+  imageUrl: string;
+  flavorIdList: number[];
+};
+
 export type UserSelect = {
   sizeId: number;
+  sizeValue: number;
   ingredientIds: number[];
 };
