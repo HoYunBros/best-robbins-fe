@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-import TopNavBar from '@/components/TopNavBar';
-import GlobalNavBar from '@/components/GlobalNavBar';
-import Carousel from '@/components/Carousel';
+import TopNavBar from '@/components/common/TopNavBar';
+import GlobalNavBar from '@/components/common/GlobalNavBar';
+import Carousel from '@/components/home/Carousel';
 import { getRecommendations } from '@/services/getRecommendations';
 
 export default async function RootPage() {

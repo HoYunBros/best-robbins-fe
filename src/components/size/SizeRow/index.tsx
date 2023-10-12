@@ -18,14 +18,17 @@ const getImageWidth = (size: Size) => {
 
 export default function SizeRow({ title, sizes }: Props) {
   const userSelect = useUserSelectStore(state => state.userSelect);
-  const setUserSelectSize = useUserSelectStore(state => state.setUserSelectSize);
+  const setUserSelectSizeId = useUserSelectStore(state => state.setUserSelectSizeId);
+  const setUserSelectSizeValue = useUserSelectStore(state => state.setUserSelectSizeValue);
 
-  const handleSizeClick = (id: number) => {
-    if (userSelect.sizeId === id) {
-      setUserSelectSize(0);
+  const handleSizeClick = (size: Size) => {
+    if (userSelect.sizeId === size.id) {
+      setUserSelectSizeId(0);
+      setUserSelectSizeValue(0);
       return;
     }
-    setUserSelectSize(id);
+    setUserSelectSizeId(size.id);
+    setUserSelectSizeValue(size.value);
   };
 
   return (
@@ -37,11 +40,11 @@ export default function SizeRow({ title, sizes }: Props) {
             key={size.id}
             className="flex flex-col items-center justify-between gap-y-[10px]"
             onClick={() => {
-              handleSizeClick(size.id);
+              handleSizeClick(size);
             }}
           >
             <div
-              className={`flex h-[74px] w-[74px] items-center justify-center rounded-2xl border-2 bg-gray_01-light dark:bg-gray_01-dark ${
+              className={`flex h-[74px] w-[74px] items-center justify-center rounded-2xl border-[3px] bg-gray_01-light dark:bg-gray_01-dark ${
                 userSelect.sizeId === size.id
                   ? 'border-secondary-light'
                   : 'border-gray_01-light dark:border-gray_01-dark'

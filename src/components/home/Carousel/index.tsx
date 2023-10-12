@@ -9,7 +9,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import 'swiper/css/keyboard';
 
-import RecipeCard from '../RecipeCard';
+import RecipeCard from '@/components/common/RecipeCard';
 import { SWIPER, STANDARD } from '@/constants';
 import { isMobile } from '@/utils/isMobile';
 import { isTargetIndex } from '@/utils/isTargetIndex';

@@ -1,5 +1,5 @@
-import Logo from '@/components/Logo';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
+import Logo from '@/components/home/Logo';
+import ThemeSwitcher from '@/components/home/ThemeSwitcher';
 import BackButton from '../BackButton';
 import CloseButton from '../CloseButton';
 
