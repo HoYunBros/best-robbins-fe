@@ -24,7 +24,6 @@ export default function Carousel({ recommendations }: Props) {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [clickedSlideIndex, setClickedSlideIndex] = useState(-1);
   const [bodyWidth, setBodyWidth] = useState(0);
-  const [isDesktop, setIsDesktop] = useState(false);
   const handleSlideClick = (index: number) => {
     if (currentSlideIndex !== index) {
       return;
@@ -40,7 +39,6 @@ export default function Carousel({ recommendations }: Props) {
     // NOTE: mobile 유무 확인 후 390 px을 기준으로 슬라이드 거리 조정
     const bodyWidth = isMobile() ? document.body.clientWidth : STANDARD.WIDTH;
     setBodyWidth(bodyWidth);
-    setIsDesktop(!isMobile());
   }, []);
 
   return (
@@ -52,7 +50,6 @@ export default function Carousel({ recommendations }: Props) {
         disableOnInteraction: false,
       }}
       freeMode={true}
-      navigation={isDesktop}
       keyboard={{ enabled: true }}
       lazyPreloadPrevNext={SWIPER.LAZY_LOADED_PREV_NEXT}
       spaceBetween={bodyWidth < STANDARD.WIDTH ? bodyWidth : SWIPER.SPACE_BETWEEN}
