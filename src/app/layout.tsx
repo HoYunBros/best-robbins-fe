@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ko">
       <body className={Pretendard.className}>
         <ThemeProvider>
-          <div className="h-[100dvh] w-screen bg-gray_01-light dark:bg-gray_01-dark ">
+          <div className="h-screen w-screen bg-gray_01-light dark:bg-gray_01-dark ">
             <section className="mx-auto flex h-full flex-col items-center justify-between bg-gray_00-light text-gray_05-light dark:bg-gray_00-dark dark:text-gray_05-dark sm:w-screen md:w-96">
               {children}
             </section>
