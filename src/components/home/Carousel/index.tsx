@@ -76,7 +76,7 @@ export default function Carousel({ recommendations }: Props) {
             className={`relative flex items-center justify-center rounded-3xl shadow-light transition-all dark:shadow-dark ${
               isTargetIndex(currentSlideIndex, index)
                 ? 'z-10 h-[460px] w-[340px] cursor-pointer'
-                : 'h-[368px] w-[272px]'
+                : 'my-[46px] h-[368px] w-[272px]'
             } `}
           >
             {isTargetIndex(clickedSlideIndex, index) ? (

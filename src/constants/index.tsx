@@ -3,7 +3,7 @@ export const SWIPER = {
   INFINITE_DELAY: 86400000, // 1 day
   SPACE_BETWEEN: -70,
   SLIDES_PER_VIEW: 1,
-  LOOPED_SLIDES: 1,
+  LOOPED_SLIDES: 2,
   LAZY_LOADED_PREV_NEXT: 1,
 };
 export const STANDARD = {
