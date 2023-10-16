@@ -106,6 +106,7 @@
 | :-------: | :--------------------------------------------------: | :-----: |
 |   언어    |    [TypeScript](https://www.typescriptlang.org/)     | ^5  |
 |    UI     |             [React](https://react.dev/)              | ^18 |
+|    UI     |             [Next](https://nextjs.org/)              | 13.5.4 |
 |  스타일   | [tailwindcss](https://tailwindcss.com/)  | ^3  |
 | 상태관리  | [zustand](https://zustand-demo.pmnd.rs/)  | ^4.4.3 |
 | 환경 설정 |           [prettier](https://prettier.io/)           | ^3.0.3  |
